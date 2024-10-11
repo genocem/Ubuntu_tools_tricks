@@ -1,16 +1,26 @@
-for exec and icon just go to the installation directory of your app 
-make a .desktop file in cd /usr/share/applications with the name of your app or whatever
-then paste this config and change accordingly
-for apps installed from snap use cd /var/lib/snapd/desktop/applications
+for exec and icon add the path for either one
+example for icon:
+	/home/ahmed/installations/eclipse-java-2023-06-R-linux-gtk-x86_64/eclipse/icon.xpm
 
-command to make a user into sudoer   sudo gpasswd -a “username” sudo
+go to the directory icons directory using: cd /usr/share/applications
+(you can also make the shortcut in your desktop "~/Desktop")
+
+simply sudo gedit name.desktop
+
+
+if you're not sudo :
+	in a sudo account use this command:
+		sudo gpasswd -a “username” sudo
+
+
+paste this config and change accordingly:
 
 [Desktop Entry]
 Name=Mathlab
 Type=Application
 Exec=change
 Icon=change
-Terminal=false (some programs need this such as matlab)
+Terminal=false (some programs need this to be "étrue" such as matlab)
 
 
 
