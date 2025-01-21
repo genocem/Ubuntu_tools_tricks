@@ -1,0 +1,20 @@
+sudo gedit /etc/fstab
+
+use the command: lsblk
+and find your usb drive directory example: /dev/sdb1
+
+then run this command with your usb direcotry: sudo blkid /dev/sdb1
+
+example: 
+/dev/sdb1: LABEL="flash128GB" UUID="7C23-B6F1" BLOCK_SIZE="512" TYPE="exfat" PTTYPE="dos" PARTUUID="692efdf4-01"
+
+this command will give you the UUID and storage type that you need (exfat in our case)
+
+then sudo gedit /etc/fstab
+
+and add at the end of it
+UUID=theID   <the path that you want>   type   sync,nosuid,nodev,nofail,noauto,x-gvfs-show,umask=0000   0   0
+
+example: 
+UUID=7C23-B6F1   /media/ahmed/flash128GB   exfat   sync,nosuid,nodev,nofail,noauto,x-gvfs-show,umask=0000   0   0
+

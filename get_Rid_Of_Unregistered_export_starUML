@@ -1,0 +1,12 @@
+save uml work as svg then open the svg file in a browser and open the console
+
+firefox asked to type this for security: allow pasting 
+
+then you can paste this:
+
+document.querySelectorAll("text").forEach(e => e.innerHTML = e.innerHTML === "UNREGISTERED"? "":e.innerHTML) 
+
+
+then save the page
+
+if you don't want svg just search for svg to png on google (or jpeg if you're into that)

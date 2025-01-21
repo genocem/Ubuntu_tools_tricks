@@ -7,3 +7,11 @@ add image: docker pull <name of image:<version(use latest for latest version)>>
 see images: docker images
 postgres: docker run -d --name postgresCont -p 5432:5432 -e POSTGRES_PASSWORD=pass123 postgres
 
+
+check if a container has auto restart set to on : 
+	docker inspect my-container | grep RestartPolicy -A 3
+	
+change it so that it doesn't auto restart anymore:
+docker update --restart=no my-container
+
+

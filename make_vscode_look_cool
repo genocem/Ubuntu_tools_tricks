@@ -1,0 +1,54 @@
+- install both of these extentions:
+		Synthwave x Fluoromachine & epic animations (it has preview tag on the top)
+		Custom CSS and JS Loader
+
+
+- if you're a linux user you need to be owner:
+	sudo chown -R $(whoami) /usr/share/code
+
+
+- now in vscode open ctrl+shift+p and search "preference: open user settings (JSON)"
+and these lines based on your os (i'm just copy pasting the description of the synthwave extention and adding linux example to it) :
+
+On Mac it might look something like the snippet below:
+
+
+  "vscode_custom_css.imports": [
+    "file:///Users/{your username}/.vscode/extensions/thecodemonkey.synthwave-x-fluoromachine-epic-animations-1.4.13/synthwave-x-fluoromachine.css",
+    "file:///Users/{your username}/.vscode/extensions/thecodemonkey.synthwave-x-fluoromachine-epic-animations-1.4.13/epic-80s-transitions.css"
+    ]
+    ,
+
+
+Windows might resemble:
+
+
+  "vscode_custom_css.imports": [
+    "file:///C:/Users/{your username}/.vscode/extensions/thecodemonkey.synthwave-x-fluoromachine-epic-animations-1.4.13/synthwave-x-fluoromachine.css",
+    "file:///C:/Users/{your username}/.vscode/extensions/thecodemonkey.synthwave-x-fluoromachine-epic-animations-1.4.13/epic-80s-transitions.css"
+    ]
+    ,
+
+
+in linux:
+        "vscode_custom_css.imports": [
+          "file:/home/{your username}/.vscode/extensions/thecodemonkey.synthwave-x-fluoromachine-epic-animations-1.4.13/synthwave-x-fluoromachine.css",
+          "file:/home/{your username}/.vscode/extensions/thecodemonkey.synthwave-x-fluoromachine-epic-animations-1.4.13/epic-80s-transitions.css"
+          ]
+      ,
+
+
+finally open ctrl+shift+p and search "enable custom css and js" you should get prompted to reload vscode so do so
+
+ 
+and that's it !
+
+btw there might be a pop up that says that the vscode installation is corrupted or something 
+ignore it 
+
+
+
+to undo:
+	get rid of what you added to the settings file 
+	use the reload feature of the custom css and js extention to reload vscode theme 
+	uninstall both extentions

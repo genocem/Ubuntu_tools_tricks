@@ -1,0 +1,8 @@
+sudo cp ~/.config/monitors.xml ~gdm/.config/monitors.xml
+
+sudo chown gdm:gdm ~gdm/.config/monitors.xml
+
+
+original answer is from :
+https://askubuntu.com/questions/1041677/how-to-change-the-login-screen-resolution-in-ubuntu-18-04
+
